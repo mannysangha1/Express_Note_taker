@@ -11,4 +11,13 @@ router.get("/api/notes",(req, res) => {
 });
 
 // Post Request
-
+router.post("/api/notes", async (req, res)=>{
+    let note = (req.body);
+    fs.readFile(filePath, function (err, data){
+        let json = JSON.parse(data)
+        json.push(note);
+        let newData = JSON.stringify(json);
+        fs.writeFileSync(path.join(__dirname, '../db/db.json'), newData)
+        res.sendFile(path.join(__dirname, '../db/db.json'))
+    })
+})
