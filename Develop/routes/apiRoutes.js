@@ -6,7 +6,9 @@ const router = express.Router();
 const filePath = path.join(__dirname, '../db/db.json');
 
 // Get request
-
+router.get("/api/notes",(req, res) => {
+    
+})
 
 // Post Request
 
