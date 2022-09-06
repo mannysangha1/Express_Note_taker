@@ -7,8 +7,8 @@ const filePath = path.join(__dirname, '../db/db.json');
 
 // Get request
 router.get("/api/notes",(req, res) => {
-    
-})
+    res.sendFile(path.join(__dirname, '../db/db.json'));
+});
 
 // Post Request
 
