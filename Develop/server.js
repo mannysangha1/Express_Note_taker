@@ -11,3 +11,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static('public'));
 
+// ROUTING
+const htmlRoutes = require('./routes/htmlRoutes');
+app.use(htmlRoutes);
+
+const apiRoutes = require('./routes/apiRoutes');
+app.use(apiRoutes);
+
