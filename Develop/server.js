@@ -18,3 +18,4 @@ app.use(htmlRoutes);
 const apiRoutes = require('./routes/apiRoutes');
 app.use(apiRoutes);
 
+// Start the server
