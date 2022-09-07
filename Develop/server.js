@@ -19,3 +19,6 @@ const apiRoutes = require('./routes/apiRoutes');
 app.use(apiRoutes);
 
 // Start the server
+app.listen(PORT, function() {
+    console.log("App listening on PORT http://localhost:" + PORT);
+});
