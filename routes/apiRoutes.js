@@ -17,7 +17,7 @@ router.post("/api/notes", async (req, res)=>{
         let json = JSON.parse(data)
         json.push(note);
         let newData = JSON.stringify(json);
-        fs.writeFileSync(path.join(__dirname, '../db/db.json'), newData)
+        fs.writeFileSync(path.join(__dirname, '../db/db.json'),newData)
         res.sendFile(path.join(__dirname, '../db/db.json'))
     })
 })
